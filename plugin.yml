@@ -1,0 +1,31 @@
+name: RoleplayChat
+version: 1.0.9
+author: Bkunkcu
+description: Light weight and useful chat customization plugin for RPG servers.
+
+main: com.gmail.bkunkcu.roleplaychat.RoleplayChat
+commands:
+  roleplaychat:
+    description: RoleplayChat main command
+    aliases: rc
+permissions:
+  roleplaychat.*:
+    description: Gives access to all RoleplayChat commands
+    children:
+      roleplaychat.reload: true
+      roleplaychat.spy: true
+      roleplaychat.nick.others: true
+  roleplaychat.reload:
+    description: Allows you to reload plugin
+    default: op
+  roleplaychat.spy:
+    description: Allows you to spy on chat
+    default: op
+  roleplaychat.nick:
+    description: Allows you to change your nickname
+    default: op
+  roleplaychat.nick.others:
+    description: Allows you to change other users nicknames
+    children:
+      roleplaychat.nick: true
+    default: op

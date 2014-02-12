@@ -1,0 +1,21 @@
+# Version: 1.0.9
+# by Bkunkcu
+
+default:
+  permission: false
+  radius: 15
+  format: '%prefix%%username%&f: %message%'
+  commands: {}
+emote:
+  permission: false
+  radius: 15
+  format: '&4[Emote] &c%prefix%%username% &c%message%'
+  commands:
+    - 'me'
+ooc:
+  permission: false
+  radius: -1
+  format: '&8[OOC] &7%prefix%%username%&7: %message%'
+  commands:
+    - 'ooc'
+    - 'b'
