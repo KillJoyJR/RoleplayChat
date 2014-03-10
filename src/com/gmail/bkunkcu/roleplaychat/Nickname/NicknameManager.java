@@ -82,7 +82,7 @@ public class NicknameManager {
 			if (handler == null)
 				return "";
 			else
-				return handler.getUserPrefix(player.getName()).replace("&", "§");
+				return handler.getUserPrefix(player.getName()).replace("&", "ï¿½");
 		}
 		
 		else if(integration == "PermissionsEx" && plugin.getConfig().getBoolean("settings.useNickname")) {
@@ -91,7 +91,7 @@ public class NicknameManager {
 			if (user == null)
 				return "";
 			else
-				return user.getPrefix().replace("&", "§");
+				return user.getPrefix().replace("&", "ï¿½");
 		}
 		
 		else {
@@ -106,7 +106,7 @@ public class NicknameManager {
 			if (handler == null)
 				return "";
 			else
-				return handler.getUserSuffix(player.getName()).replace("&", "§");
+				return handler.getUserSuffix(player.getName()).replace("&", "ï¿½");
 		}
 		
 		else if(integration == "PermissionsEx" && plugin.getConfig().getBoolean("settings.useNickname")) {
@@ -115,7 +115,7 @@ public class NicknameManager {
 			if (user == null)
 				return "";
 			else
-				return user.getSuffix().replace("&", "§");
+				return user.getSuffix().replace("&", "ï¿½");
 		}
 		
 		else {
@@ -124,7 +124,7 @@ public class NicknameManager {
 	}
 	
 	public void setNickname(Player player, String username, String nickname) {
-		if(nickname.matches("[a-zA-Z0-9]+") && nickname.length() <= 20) {
+		if(nickname.matches("[a-zA-Z0-9_]+") && nickname.length() <= 20) {
 			ResultSet rs = plugin.DatabaseManager.query("SELECT * FROM nicknames WHERE username='" + username + "'");
 			
 			try {
